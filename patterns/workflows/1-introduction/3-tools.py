@@ -5,7 +5,7 @@ import requests
 from openai import OpenAI
 from pydantic import BaseModel, Field
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=os.getenv("PRIVATE_OPENAI_API_KEY"))
 
 """
 docs: https://platform.openai.com/docs/guides/function-calling
@@ -53,7 +53,7 @@ system_prompt = "You are a helpful weather assistant."
 
 messages = [
     {"role": "system", "content": system_prompt},
-    {"role": "user", "content": "What's the weather like in Paris today?"},
+    {"role": "user", "content": "What's the weather like in Sao Paulo today?"},
 ]
 
 completion = client.chat.completions.create(

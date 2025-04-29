@@ -4,7 +4,7 @@ import os
 from openai import OpenAI
 from pydantic import BaseModel, Field
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=os.getenv("PRIVATE_OPENAI_API_KEY"))
 
 """
 docs: https://platform.openai.com/docs/guides/function-calling
@@ -20,7 +20,7 @@ def search_kb(question: str):
     Load the whole knowledge base from the JSON file.
     (This is a mock function for demonstration purposes, we don't search)
     """
-    with open("kb.json", "r") as f:
+    with open("./patterns/workflows/1-introduction/kb.json", "r") as f:
         return json.load(f)
 
 
