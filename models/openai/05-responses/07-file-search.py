@@ -2,8 +2,9 @@ import requests
 from io import BytesIO
 from openai import OpenAI
 import textwrap
+import os
 
-client = OpenAI()
+client = OpenAI(api_key=os.getenv("PRIVATE_OPENAI_API_KEY"))
 
 
 """

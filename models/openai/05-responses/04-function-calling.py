@@ -1,6 +1,7 @@
 from openai import OpenAI
+import os
 
-client = OpenAI()
+client = OpenAI(api_key=os.getenv("PRIVATE_OPENAI_API_KEY"))
 
 tools = [
     {

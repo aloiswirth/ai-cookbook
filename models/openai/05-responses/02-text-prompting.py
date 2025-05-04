@@ -1,6 +1,7 @@
 from openai import OpenAI
+import os
 
-client = OpenAI()
+client = OpenAI(api_key=os.getenv("PRIVATE_OPENAI_API_KEY"))
 
 """
 Model spec: https://model-spec.openai.com/2025-02-12.html

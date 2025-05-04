@@ -3,11 +3,12 @@ from docling.document_converter import DocumentConverter
 from dotenv import load_dotenv
 from openai import OpenAI
 from utils.tokenizer import OpenAITokenizerWrapper
+import os
 
 load_dotenv()
 
 # Initialize OpenAI client (make sure you have OPENAI_API_KEY in your environment variables)
-client = OpenAI()
+client =OpenAI(api_key=os.getenv("PRIVATE_OPENAI_API_KEY"))
 
 
 tokenizer = OpenAITokenizerWrapper()  # Load our custom tokenizer for OpenAI

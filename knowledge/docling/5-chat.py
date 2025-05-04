@@ -2,12 +2,13 @@ import streamlit as st
 import lancedb
 from openai import OpenAI
 from dotenv import load_dotenv
+import os
 
 # Load environment variables
 load_dotenv()
 
 # Initialize OpenAI client
-client = OpenAI()
+client = OpenAI(api_key=os.getenv("PRIVATE_OPENAI_API_KEY"))
 
 
 # Initialize LanceDB connection

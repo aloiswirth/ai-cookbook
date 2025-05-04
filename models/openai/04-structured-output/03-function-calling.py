@@ -1,7 +1,7 @@
 from openai import OpenAI
 import json
-
-client = OpenAI()
+import os
+client = OpenAI(api_key=os.getenv("PRIVATE_OPENAI_API_KEY"))
 
 
 def send_reply(message: str):

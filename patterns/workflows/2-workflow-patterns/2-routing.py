@@ -12,7 +12,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=os.getenv("PRIVATE_OPENAI_API_KEY"))
 model = "gpt-4o"
 
 # --------------------------------------------------------------

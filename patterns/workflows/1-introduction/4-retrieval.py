@@ -14,13 +14,13 @@ docs: https://platform.openai.com/docs/guides/function-calling
 # Define the knowledge base retrieval tool
 # --------------------------------------------------------------
 
-
+print(os.getcwd())
 def search_kb(question: str):
     """
     Load the whole knowledge base from the JSON file.
     (This is a mock function for demonstration purposes, we don't search)
     """
-    with open("./patterns/workflows/1-introduction/kb.json", "r") as f:
+    with open("/home/alois/Dokumente/development/ai-cookbook/patterns/workflows/1-introduction/kb.json", "r") as f:
         return json.load(f)
 
 

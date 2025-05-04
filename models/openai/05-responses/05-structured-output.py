@@ -1,10 +1,10 @@
 import json
 from typing import List
-
+import os
 from openai import OpenAI
 from pydantic import BaseModel
 
-client = OpenAI()
+client = OpenAI(api_key=os.getenv("PRIVATE_OPENAI_API_KEY"))
 
 # --------------------------------------------------------------
 # Using a JSON Schema
